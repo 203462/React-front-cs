@@ -2,6 +2,7 @@ import axios from "axios";
 import ProfileCss from "./Profile.module.css";
 import { Link } from "react-router-dom";
 
+
 const Profile = () => {
     let user,name,last,correo,imagen,url_imagenProfile,userRespaldo,nameRespaldo, lastRespaldo, correoRespaldo;
 
