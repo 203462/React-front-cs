@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body{
+    background-image: linear-gradient(125deg, #ffc31a 0, #ffb42b 8.33%, #ffa338 16.67%, #ff9143 25%, #ff7d4b 33.33%, #ff6851 41.67%, #f25353 50%, #d94053 58.33%, #c23054 66.67%, #ae2455 75%, #9d1c56 83.33%, #8e1859 91.67%, #81195d 100%);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .onda{
+    position:absolute;
+    width: 50%;
+    bottom: 17%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.formContainer{
+    flex: 1;
+    height: 600px;
+    border-radius: 10px;
+    background-color: white;
+}
+.formContainer h1{
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+.formContainer p{
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    margin-top: 4%;
+}
+
+#message{
+    grid-column: span 2;
+}
+
+.formRegister{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: white;
+    margin: 5%;
+    width: auto;
+}
+.formRegister p{
+    color: #000;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.formRegister .group{
+    position: relative;
+    margin: 10px;
+}
+
+input{
+    background: none;
+    font-size: 16px;
+    color: #010820; 
+    padding: 10px 0px 5px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+input:focus{
+    outline: none;
+    color: #000;
+}
+
+label{
+    color: #000;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #010820;
+}
+
+.borderBottom{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.borderBottom::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: #010820;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.borderBottom::before,
+input:valid~.borderBottom::before{
+    width: 100%;
+}
+
+
+.formRegister button{
+    grid-column: span 2;
+    border: none;
+    width: 100%;
+    background: #010820;
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
